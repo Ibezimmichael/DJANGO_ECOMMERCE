@@ -1,0 +1,92 @@
+{% extends  "base.html" %}
+
+
+{% block content %}
+
+<style>
+
+
+    body{
+
+
+        background-color: gray;
+
+    }
+
+
+
+</style>
+<br>
+    <div class="container ">
+        <div class="row bg-white shadow-md p-5 form-layout">
+            <div class="col-md-12">
+                
+                <h3> Welcome, {{user}} </h3>
+
+                <hr>
+                <P> This is your dashboard where you can perform any of the following</p>
+                <li> Track your orders</li>
+                <li> Manage your account</li>
+                
+            </div>
+        </div>
+    </div>
+     
+    <br> 
+
+    <div class="container ">
+        <div class="row bg-white shadow-md p-5 form-layout">
+            <div class="col-md-12">
+                
+               
+                <h4> Track your orders </h4>
+
+                <hr>
+
+                <a class=" btn btn-primary navbar-btn text-white" href="{% url 'track-orders' %}">My orders</a>
+                
+            </div>
+        </div>
+    </div>
+     
+    <br>
+    <div class="container ">
+        <div class="row bg-white shadow-md p-5 form-layout">
+            <div class="col-md-12">
+                
+                <h4> Manage your account</h4>
+
+                <hr>
+
+                <P> Update or Delete your account</p>
+                <a class=" btn btn-primary navbar-btn text-white" href="{% url 'profile-management' %}">Profile management</a>
+
+                <br>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container ">
+        <div class="row bg-white shadow-md p-5 form-layout">
+            <div class="col-md-12">
+                
+                <h4> Manage shipping</h4>
+
+                <hr>
+
+                <P> Enter shipping address</p>
+                <a class=" btn btn-primary navbar-btn text-white" href="{% url 'manage-shipping' %}">Manage shipping</a>
+
+                <br>
+            </div>
+        </div>
+    </div>
+    <br>
+
+<body>
+
+  
+
+
+{% endblock %}
+
