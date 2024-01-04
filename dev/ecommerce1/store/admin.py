@@ -11,6 +11,7 @@ class SummerAdmin(SummernoteModelAdmin):
 @admin.register(Product)
 class ProductAdmin(SummerAdmin, admin.ModelAdmin):
     list_display = ["title", "brand", "price", "category"]
+    list_select_related = ['category']
     prepopulated_fields = {'slug': ('title',)}
     
 @admin.register(Category)

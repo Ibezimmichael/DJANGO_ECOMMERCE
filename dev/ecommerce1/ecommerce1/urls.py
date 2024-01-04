@@ -31,6 +31,6 @@ urlpatterns = [
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-admin.site.site_title = "TicketsPlus site admin (DEV)"
-admin.site.site_header = "TicketsPlus administration"
-admin.site.index_title = "Site administration"
+# admin.site.site_title = "TicketsPlus site admin (DEV)"
+# admin.site.site_header = "TicketsPlus administration"
+# admin.site.index_title = "Site administration"
