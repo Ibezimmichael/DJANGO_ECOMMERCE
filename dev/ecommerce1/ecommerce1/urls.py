@@ -21,6 +21,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('admin/', include('admin_material.urls')),
+    path('summernote/', include('django_summernote.urls')),
     path('', include('store.urls')),
     path('cart/', include('cart.urls')),
     path('account/', include('account.urls')),
@@ -28,3 +30,7 @@ urlpatterns = [
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+admin.site.site_title = "TicketsPlus site admin (DEV)"
+admin.site.site_header = "TicketsPlus administration"
+admin.site.index_title = "Site administration"
